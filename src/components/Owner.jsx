@@ -11,14 +11,14 @@ export default function Owner() {
 
         <div className="owner__portrait reveal-left">
           <div className="owner__photo">
-            <img src={ruben} alt="Ruben 'RJ' Flores — Owner & General Contractor" className="owner__img" />
+            <img src={ruben} alt="RJ Flores — Owner & General Contractor" className="owner__img" />
           </div>
           <div className="owner__photo-ring" />
         </div>
 
         <div className="owner__text reveal-right">
           <span className="section-label">Meet the GC</span>
-          <h2 className="owner__name">Ruben <span className="gold">"RJ"</span> Flores</h2>
+          <h2 className="owner__name"><span className="gold">RJ</span> Flores</h2>
           <p className="owner__title">Owner &amp; General Contractor</p>
 
           <p className="owner__bio">

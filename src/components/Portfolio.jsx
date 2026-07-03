@@ -1,14 +1,22 @@
 import { useState } from 'react';
 import { useInView } from '../hooks/useInView';
+import {
+  IllustrationInterior,
+  IllustrationCommercial,
+  IllustrationExterior,
+  IllustrationFraming,
+  IllustrationConcrete,
+  IllustrationFloorPlan,
+} from './PortfolioIllustrations';
 import './Portfolio.css';
 
 const projects = [
-  { num: '01', type: 'Interior Remodel', location: 'Houston, TX', tag: 'Residential' },
-  { num: '02', type: 'Commercial Buildout', location: 'Dallas, TX', tag: 'Commercial' },
-  { num: '03', type: 'Exterior Renovation', location: 'San Antonio, TX', tag: 'Exterior' },
-  { num: '04', type: 'Framing & Drywall', location: 'Austin, TX', tag: 'Residential' },
-  { num: '05', type: 'Concrete & Foundation', location: 'Fort Worth, TX', tag: 'Commercial' },
-  { num: '06', type: 'Full Home Renovation', location: 'El Paso, TX', tag: 'Residential' },
+  { num: '01', type: 'Interior Remodel',      location: 'Houston, TX',     tag: 'Residential', Illustration: IllustrationInterior   },
+  { num: '02', type: 'Commercial Buildout',   location: 'Dallas, TX',      tag: 'Commercial',  Illustration: IllustrationCommercial },
+  { num: '03', type: 'Exterior Renovation',   location: 'San Antonio, TX', tag: 'Exterior',    Illustration: IllustrationExterior   },
+  { num: '04', type: 'Framing & Drywall',     location: 'Austin, TX',      tag: 'Residential', Illustration: IllustrationFraming    },
+  { num: '05', type: 'Concrete & Foundation', location: 'Fort Worth, TX',  tag: 'Commercial',  Illustration: IllustrationConcrete   },
+  { num: '06', type: 'Full Home Renovation',  location: 'El Paso, TX',     tag: 'Residential', Illustration: IllustrationFloorPlan  },
 ];
 
 const FILTERS = ['All', 'Residential', 'Commercial', 'Exterior'];
@@ -53,7 +61,7 @@ export default function Portfolio() {
               className={`portfolio__card reveal reveal-d${Math.min(i + 1, 6)}`}
             >
               <div className="portfolio__img">
-                <span className="portfolio__num">{p.num}</span>
+                <p.Illustration />
                 <div className="portfolio__overlay">
                   <span className="portfolio__overlay-text">View Project</span>
                 </div>

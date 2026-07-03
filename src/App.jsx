@@ -6,6 +6,7 @@ import Services from './components/Services';
 import About from './components/About';
 import Owner from './components/Owner';
 import Portfolio from './components/Portfolio';
+import InstagramFeed from './components/InstagramFeed';
 import ServiceArea from './components/ServiceArea';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -28,6 +29,7 @@ export default function App() {
         <About />
         <Owner />
         <Portfolio />
+        <InstagramFeed />
         <ServiceArea />
         <Contact />
       </main>
